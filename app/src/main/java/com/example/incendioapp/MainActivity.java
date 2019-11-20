@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 com.example.cmp1144.util.PrefUtil.setString(getBaseContext(),"UF.des",String.valueOf(spinnerUf.getSelectedItem()));
 
                 com.example.cmp1144.util.PrefUtil.setInteger(getBaseContext(),"UF.cod",spinnerUf.getSelectedItemPosition());
+
 
                 Log.d(TAG,"Item salvo nas preferencias: " + String.valueOf(spinnerUf.getSelectedItem()));
 
