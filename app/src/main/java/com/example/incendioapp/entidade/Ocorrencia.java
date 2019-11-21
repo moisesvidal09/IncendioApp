@@ -77,14 +77,27 @@ public class Ocorrencia {
         return nomeSolicitante;
     }
 
-    public void setNomeSolicitante(String nomeSolicitante) {
+
+    public Ocorrencia(int id, String nomeSolicitante, int numeroViatura, int cep, String descricao, String localizacao) {
+        this.id = id;
         this.nomeSolicitante = nomeSolicitante;
+        this.numeroViatura = numeroViatura;
+        this.cep = cep;
+        this.descricao = descricao;
+        this.localizacao = localizacao;
     }
 
     @Override
     public String toString() {
         return "Ocorrencia{" +
-                "nomeSolicitante='" + nomeSolicitante + '\'' +
+                "id=" + id +
+                ", nomeSolicitante='" + nomeSolicitante + '\'' +
+                ", numeroViatura=" + numeroViatura +
+                ", cep=" + cep +
+                ", descricao='" + descricao + '\'' +
+                ", localizacao='" + localizacao + '\'' +
+                ", data=" + data +
+                ", areaAtingida=" + areaAtingida +
                 '}';
     }
 }

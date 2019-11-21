@@ -26,7 +26,7 @@ public class ListaOcorrencia extends AppCompatActivity {
         final List<Ocorrencia> ocorrenciaList = new ArrayList<Ocorrencia>();
 
         for(int i =0; i<20;i++)
-        ocorrenciaList.add(new Ocorrencia("Moisés"));
+        ocorrenciaList.add(new Ocorrencia(5,"Moisés",123,74660205,"Teste","Setor crimeia leste"));
 
         RecyclerView rvContacts = findViewById(R.id.rvOcorrencias);
 
@@ -36,16 +36,16 @@ public class ListaOcorrencia extends AppCompatActivity {
 
         rvContacts.setLayoutManager(new LinearLayoutManager(this));
 
-        Button btnAddOcorrencia = findViewById(R.id.btnAdicionarOcorrencia);
-
-        btnAddOcorrencia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //aqui chama a tela de cadastrar ocorrencia
-                ocorrenciaList.add(new Ocorrencia("novo"));
-                adapter.notifyItemInserted(ocorrenciaList.size());
-            }
-        });
+//        Button btnAddOcorrencia = findViewById(R.id.btnAdicionarOcorrencia);
+//
+//        btnAddOcorrencia.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //aqui chama a tela de cadastrar ocorrencia
+//                ocorrenciaList.add(new Ocorrencia("novo"));
+//                adapter.notifyItemInserted(ocorrenciaList.size());
+//            }
+//        });
 
     }
 

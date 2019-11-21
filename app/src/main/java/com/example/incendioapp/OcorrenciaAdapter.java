@@ -42,23 +42,31 @@ public class OcorrenciaAdapter extends
 
         TextView textView = viewHolder.nome;
         textView.setText(ocorrencia.getNomeSolicitante());
-        Button btnExibir = viewHolder.exibir;
-        btnExibir.setText("Exibir");
-        btnExibir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //aqui chama a tela de exibir
-            }
-        });
-
-        Button btnEditar = viewHolder.editar;
-        btnEditar.setText("Editar");
-        btnEditar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //aqui chama a tela de editar
-            }
-        });
+        TextView txtId = viewHolder.id;
+        textView.setText(ocorrencia.getNomeSolicitante());
+        TextView txtLocalizacao = viewHolder.localizacao;
+        textView.setText(ocorrencia.getNomeSolicitante());
+        TextView txtCep = viewHolder.cep;
+        textView.setText(ocorrencia.getNomeSolicitante());
+        TextView txtData = viewHolder.dataOcorrencia;
+        textView.setText(ocorrencia.getNomeSolicitante());
+//        Button btnExibir = viewHolder.exibir;
+//        btnExibir.setText("Exibir");
+//        btnExibir.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //aqui chama a tela de exibir
+//            }
+//        });
+//
+//        Button btnEditar = viewHolder.editar;
+//        btnEditar.setText("Editar");
+//        btnEditar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //aqui chama a tela de editar
+//            }
+//        });
     }
 
     // Returns the total count of items in the list
@@ -70,6 +78,10 @@ public class OcorrenciaAdapter extends
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView nome;
+        public TextView id;
+        public TextView localizacao;
+        public TextView cep;
+        public TextView dataOcorrencia;
         public Button exibir;
         public Button editar;
 
@@ -78,8 +90,12 @@ public class OcorrenciaAdapter extends
             super(itemView);
 
             nome = itemView.findViewById(R.id.nomeSolicitante);
-            exibir = itemView.findViewById(R.id.btnExibir);
-            editar = itemView.findViewById(R.id.btnEditar);
+            id = itemView.findViewById(R.id.idOcorrencia);
+            localizacao = itemView.findViewById(R.id.localizacao);
+            cep = itemView.findViewById(R.id.cep);
+            dataOcorrencia = itemView.findViewById(R.id.dataOcorrencia);
+//            exibir = itemView.findViewById(R.id.btnExibir);
+//            editar = itemView.findViewById(R.id.btnEditar);
 
         }
     }
