@@ -8,8 +8,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvOcorrencias"
-        android:layout_width="374dp"
-        android:layout_height="425dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,12 +21,12 @@
         android:id="@+id/btnAdicionarOcorrencia"
         android:layout_width="198dp"
         android:layout_height="48dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="92dp"
         android:layout_marginRight="92dp"
         android:text="Adicionar Ocorrência"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.989"
+        app:layout_constraintHorizontal_bias="0.876"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
