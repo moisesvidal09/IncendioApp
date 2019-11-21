@@ -2,6 +2,7 @@ package com.example.incendioapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -54,8 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
                 com.example.cmp1144.util.PrefUtil.setInteger(getBaseContext(),"UF.cod",spinnerUf.getSelectedItemPosition());
 
-
                 Log.d(TAG,"Item salvo nas preferencias: " + String.valueOf(spinnerUf.getSelectedItem()));
+
+                Intent i = new Intent(getApplicationContext(), ListaOcorrencia.class);
+                
+                startActivity(i);
 
             }
         });
