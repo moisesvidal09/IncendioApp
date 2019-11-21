@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.incendioapp.entidade.Ocorrencia;
+
 import java.util.List;
 
 public class OcorrenciaAdapter extends
@@ -74,9 +77,9 @@ public class OcorrenciaAdapter extends
         public ViewHolder(View itemView) {
             super(itemView);
 
-            nome = (TextView) itemView.findViewById(R.id.nomeSolicitante);
-            exibir = (Button) itemView.findViewById(R.id.btnExibir);
-            editar = (Button) itemView.findViewById(R.id.btnEditar);
+            nome = itemView.findViewById(R.id.nomeSolicitante);
+            exibir = itemView.findViewById(R.id.btnExibir);
+            editar = itemView.findViewById(R.id.btnEditar);
 
         }
     }

@@ -5,9 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.incendioapp.entidade.Ocorrencia;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +28,7 @@ public class ListaOcorrencia extends AppCompatActivity {
         for(int i =0; i<20;i++)
         ocorrenciaList.add(new Ocorrencia("Moisés"));
 
-        RecyclerView rvContacts = (RecyclerView) findViewById(R.id.rvOcorrencias);
+        RecyclerView rvContacts = findViewById(R.id.rvOcorrencias);
 
         final OcorrenciaAdapter adapter = new OcorrenciaAdapter(ocorrenciaList);
 
@@ -35,7 +36,7 @@ public class ListaOcorrencia extends AppCompatActivity {
 
         rvContacts.setLayoutManager(new LinearLayoutManager(this));
 
-        Button btnAddOcorrencia = (Button) findViewById(R.id.btnAdicionarOcorrencia);
+        Button btnAddOcorrencia = findViewById(R.id.btnAdicionarOcorrencia);
 
         btnAddOcorrencia.setOnClickListener(new View.OnClickListener() {
             @Override

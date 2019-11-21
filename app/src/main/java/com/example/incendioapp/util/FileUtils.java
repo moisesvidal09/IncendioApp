@@ -65,7 +65,7 @@ public class FileUtils {
      */
     public static StringBuilder readFile(String filePath, String charsetName) {
         File file = new File(filePath);
-        StringBuilder fileContent = new StringBuilder("");
+        StringBuilder fileContent = new StringBuilder();
         if (file == null || !file.isFile()) {
             return null;
         }
@@ -222,7 +222,7 @@ public class FileUtils {
         try {
             makeDirs(file.getAbsolutePath());
             o = new FileOutputStream(file, append);
-            byte data[] = new byte[1024];
+            byte[] data = new byte[1024];
             int length = -1;
             while ((length = stream.read(data)) != -1) {
                 o.write(data, 0, length);
@@ -476,7 +476,7 @@ public class FileUtils {
         }
 
         File folder = new File(folderName);
-        return (folder.exists() && folder.isDirectory()) ? true : folder.mkdirs();
+        return (folder.exists() && folder.isDirectory()) || folder.mkdirs();
     }
 
     /**
