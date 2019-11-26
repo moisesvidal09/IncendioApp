@@ -1,6 +1,7 @@
 package com.example.incendioapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,8 @@ public class OcorrenciaAdapter extends
             @Override
             public void onClick(View view) {
                 //aqui chama a tela de exibir
+                Context context = view.getContext();
+                context.startActivity(new Intent(context, ShowOcorrencia.class));
             }
         });
 
@@ -57,6 +60,8 @@ public class OcorrenciaAdapter extends
             @Override
             public void onClick(View view) {
                 //aqui chama a tela de editar
+                Context context = view.getContext();
+                context.startActivity(new Intent(context, EditOcorrencia.class));
             }
         });
     }

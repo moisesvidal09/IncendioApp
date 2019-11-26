@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,8 +43,9 @@ public class ListaOcorrencia extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //aqui chama a tela de cadastrar ocorrencia
-                ocorrenciaList.add(new Ocorrencia("novo"));
-                adapter.notifyItemInserted(ocorrenciaList.size());
+                Intent i = new Intent(getApplicationContext(), CreateOcorrencia.class);
+                startActivity(i);
+               // adapter.notifyItemInserted(ocorrenciaList.size());
             }
         });
 

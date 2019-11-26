@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">IncendioApp</string>
-
+    <string-array name="funcoesSpinner">
+        <item>Bombeiro</item>
+        <item>Pessoa</item>
+    </string-array>
     <string-array name="unidade_federativa">
         <item>RO</item>
         <item>AC</item>
